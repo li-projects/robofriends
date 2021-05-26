@@ -14,9 +14,12 @@ function App() {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response => response.json())
             .then(robots => setRobots(robots))
+    }, [])
+
+    useEffect(() => {
         console.log(count)
     }, [count])
-
+    
     const onSearchChange = (event) => {
         setSearchfield(event.target.value)}
 
